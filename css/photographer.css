@@ -6,6 +6,28 @@
     background-color: #FAFAFA;
     height: 300px;
     margin: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.photograph-header .info {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.photograph-header .info h1 {
+    font-size: 36px;
+    color: #312E2E;
+    margin: 0;
+}
+
+.photograph-header .info p {
+    font-size: 18px;
+    color: #312E2E;
+    margin: 5px 0;
 }
 
 .contact_button {
@@ -19,6 +41,10 @@
     background-color: #901C1C;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.contact_button:hover {
+    background-color: #b22d2d;
 }
 
 .modal {
