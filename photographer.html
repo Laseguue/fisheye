@@ -19,10 +19,26 @@
           <h1 class="photographer-name"></h1>
           <p class="photographer-location"></p>
           <p class="photographer-tagline"></p>
-          <p class="photographer-price"></p>
         </div>
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <div>
+          <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        </div>
+        <div class="profile-picture">
+          <img src="" alt="Photo de profil" class="photographer-portrait">
+        </div>
       </div>
+      <div class="filter_bar">
+        <label for="filter">Trier par :</label>
+        <select id="filter">
+            <option value="popularity">Popularité</option>
+            <option value="date">Date</option>
+            <option value="title">Titre</option>
+        </select>
+    </div>
+      <section class="media_section">
+        <div class="media_grid"></div>
+      </section>
+      
       <div id="contact_modal">
         <div class="modal">
           <header>
@@ -50,7 +66,16 @@
           </form>
         </div>
       </div>
-      <!-- Vous pouvez ajouter une section pour afficher les médias du photographe ici -->
+      <div class="fixed_footer">
+        <div class="like_counter">
+            <span id="total_likes">0</span>
+            <img src="assets/icons/like-icone-black.svg" alt="Like Icon" class="like_icon" />
+        </div>
+        <div class="photographer_price">
+            <span id="photographer_price">0</span>€ / jour
+        </div>
+      </div>
+    </div>
     </main>
     <script src="scripts/pages/photographer.js"></script>
     <script src="scripts/utils/contactForm.js"></script>
