@@ -7,6 +7,18 @@
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     <title>Fisheye - Photographe</title>
   </head>
+  <div id="lightbox" class="lightbox" style="display:none;">
+    <div class="lightbox__content">
+      <button tabindex="0" class="lightbox__close" aria-label="Fermer la lightbox">&times;</button>
+      <button class="lightbox__prev" aria-label="Image précédente">&#10094;</button>
+      <button class="lightbox__next" aria-label="Image suivante">&#10095;</button>
+      <div class="lightbox__media-container">
+        <img class="lightbox__image" src="" alt="" style="display:none;" />
+        <video class="lightbox__video" controls style="display:none;"></video>
+        <p class="lightbox__title"></p>
+      </div>
+    </div>
+  </div>
   <body>
     <header>
       <a href="index.html">
@@ -39,11 +51,11 @@
         <div class="media_grid"></div>
       </section>
       
-      <div id="contact_modal">
+      <dialog id="contact_modal">
         <div class="modal">
           <header>
             <h2>Contactez-moi</h2>
-            <img src="assets/icons/close.svg" onclick="closeModal()" alt="Fermer" />
+            <img tabindex="3" src="assets/icons/close.svg" onclick="closeModal()" alt="Fermer" />
           </header>
           <form>
             <div>
@@ -65,7 +77,7 @@
             <button type="submit" class="contact_button">Envoyer</button>
           </form>
         </div>
-      </div>
+      </dialog>
       <div class="fixed_footer">
         <div class="like_counter">
             <span id="total_likes">0</span>
